@@ -14,7 +14,6 @@
   </a>
 
 <h3 align="center">Work Day Panner</h3>
-
   <p align="center">
     work planner to add and save important events
     <br />
