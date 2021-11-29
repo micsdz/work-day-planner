@@ -1,30 +1,35 @@
-var themeSwitcher = $("#theme-switcher");
-var backgroundTheme = $(".backgroundTheme");
-var calendarBtn = $("#calendarBtn")
-var mainContent = $("#maincontent");
-// Set default mode to dark
-var mode = "dark";
-
-// Listen for a click event on toggle switch
-themeSwitcher.click(function() {
-  // If mode is dark, apply light background
-  if (mode === "dark") {
-    mode = "light";
-    backgroundTheme.attr("class", "light");
-  }
-  // If mode is light, apply dark background 
-  else {
-    mode = "dark";
-    backgroundTheme.attr("class", "dark");
-  }
-});
-calendarBtn.click(function() {
-    mainContent.innerHTML = "";
-    calendarContent()
+// Time Block in jQuery
+let myClock = document.getElementById("currentDay").textContent = moment().format('[Today is] MMMM Do YYYY, h:mm:ss a');
+    myClock.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
+    setInterval(function () {
+    myClock.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
+    }, 1000)
+let time = moment();
+$(".saveBtn").click(function () {
+    const time = $(this).parent().attr("id");
+    const schedule = $(this).siblings(".schedule").val()
+    localStorage.setItem(time, schedule);
 })
-function calendarContent() {
-    // Used to clear start button at beginning and clear previous question;
-    mainContent.innerHTML = "";
-    const calendarEl = $("<body></body>");
-    calendarEl.innerHTML = calendar;
+function startPage() {
+    $(".time-block").each(function () {
+        const lsData = localStorage.getItem($(this).attr("id"));
+
+        if (lsData) {
+            $(this).children(".schedule").val(lsData);
+        }
+        setCalendarColors($(this).attr("id"), this);
+    })
 }
+function setCalendarColors(savedTime, element) {
+    hour = time.hours();
+    if (parseInt(savedTime) > hour) {
+        $(element).addClass("future");
+    }
+    else if (parseInt(savedTime) < hour) {
+        $(element).addClass("past");
+    }
+    else {
+        $(element).addClass("present");
+    }
+}
+startPage();
