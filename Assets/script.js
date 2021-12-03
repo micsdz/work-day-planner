@@ -1,9 +1,9 @@
 // Time Block in jQuery
-let myClock = document.getElementById("currentDay").textContent = moment().format('[Today is] MMMM Do YYYY, h:mm:ss a');
-    myClock.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
+let myClock = $("#currentDay");
+    myClock.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     setInterval(function () {
-    myClock.textContent = moment().format('MMMM Do YYYY, h:mm:ss a');
-    }, 1000)
+    myClock.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    }, 1000);
 let time = moment();
 $(".saveBtn").click(function () {
     const time = $(this).parent().attr("id");
