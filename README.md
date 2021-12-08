@@ -76,7 +76,7 @@ Micah Diaz - micah.diaz@du.edu
 [stars-shield]: https://img.shields.io/github/stars/theresaqueryforthat/website_accessibility_refactor.svg?style=for-the-badge
 [stars-url]: https://github.com/theresaqueryforthat/website_accessibility_refactor/stargazers
 [issues-shield]: https://img.shields.io/github/issues/theresaqueryforthat/website_accessibility_refactor.svg?style=for-the-badge
-[issues-url]: https://github.com/theresaqueryforthat/website_accessibility_refactor/issues
+[issues-url]: https://github.com/micsdz/work-day-planner/issues
 [license-shield]: https://img.shields.io/github/license/theresaqueryforthat/website_accessibility_refactor.svg?style=for-the-badge
 [license-url]: https://github.com/theresaqueryforthat/website_accessibility_refactor/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
